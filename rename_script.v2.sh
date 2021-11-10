@@ -21,8 +21,7 @@ for file in $(ls [0-9]*pl); do
 
 	if [[ $1 = "--write" ]]
 	then
-		echo  "test write"
-		# git mv "$file" "$(printf 0$newprefix$num)_$rest"
+		git mv "$file" "$(printf 0$newprefix$num)_$rest"
 	else
 		echo  "$file" "-->" "$(printf 0$newprefix$num)_$rest"
 	fi
